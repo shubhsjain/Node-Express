@@ -2,6 +2,8 @@
 
 const { readFile, writeFile } = require("fs"); /** common JS */
 
+console.log("START");
+
 readFile("./content/first.txt", "utf8", (err, result) => {
   if (err) {
     console.log(err);
@@ -22,8 +24,15 @@ readFile("./content/first.txt", "utf8", (err, result) => {
           console.log(err);
           return;
         }
-        console.log(result);
+        console.log("DONE WITH THIS TASK");
       }
     );
   });
 });
+console.log("STARTING NEXT TASK");
+
+/**
+ *      SYNC VS ASYNC
+ * THIS IS ASYNC
+ * STARTING THE FIRST THEN STARTING THE SECOND THEN FINISHING THE FIRST THEN SECOND
+ */
