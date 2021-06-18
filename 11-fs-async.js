@@ -1,4 +1,6 @@
-const { readFile, writeFile } = require("fs");
+// import { readFile, writeFile } from "fs";    /** ES6 module */
+
+const { readFile, writeFile } = require("fs"); /** common JS */
 
 readFile("./content/first.txt", "utf8", (err, result) => {
   if (err) {
