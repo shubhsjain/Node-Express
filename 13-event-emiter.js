@@ -1,6 +1,15 @@
+// get back the class
+// if want custom extend from class
+// otherwise just for emitting and handling events create instance
+
 const EventEmiter = require("events");
 
 const customEmiter = new EventEmiter();
+
+// on and emit methods
+// keep track of the order
+// additional arguments
+// built-in modules utilize it
 
 customEmiter.on("response", (name, id) => {
   console.log(`data recieved ${name} with id: ${id}`);
